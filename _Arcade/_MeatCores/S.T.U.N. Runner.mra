@@ -4,7 +4,7 @@
   <year>1989</year>
   <manufacturer>Atari Games</manufacturer>
   <category>Racing</category>
-  <rbf>StunRunner</rbf>
+  <rbf>Arcade-StunRunner</rbf>
   <rotation>horizontal</rotation>
   <buttons default="A,B,Start,Select" names="Fire L,Fire R,Start/Shockwave,Coin"/>
   <switches default="00 01">
