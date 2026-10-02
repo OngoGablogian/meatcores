@@ -1,7 +1,7 @@
 <misterromdescription>
     <about author="meathax" webpage="https://www.patreon.com/c/Meathax"/>
     <rotation>horizontal</rotation>
-    <name>Violent Storm (ver EAC)</name>
+    <name>Violent Storm (video fixes, EAC)</name>
     <setname>viostorm</setname>
     <mameversion>0289</mameversion>
     <year>1993</year>
@@ -10,7 +10,7 @@
     <rbf>Arcade-VioStorm</rbf>
     <joystick>8</joystick>
     <region>World</region>
-    <rom index="0" zip="viostorm.zip" md5="None" asm_md5="3347b738be05bf5c8e83bbcf884fb2b1">
+    <rom index="0" zip="viostorm.zip" md5="None" asm_md5="3347b738be05bf5c8e83bbcf884fb2b1" address="0x30000000">
         <!--  -->
         <part>
             00 00 00 00 00 00 00 00
