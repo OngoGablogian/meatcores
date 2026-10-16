@@ -1,0 +1,57 @@
+<misterromdescription>
+	<name>Zaviga</name>
+	<mameversion>0288</mameversion>
+	<setname>zaviga</setname>
+	<year>1984</year>
+	<manufacturer>Data East Corporation</manufacturer>
+	<category>Shooter</category>
+	<rbf>Arcade-DataEastLiberation</rbf>
+	<about author="aCORES" source="MAME bwing.cpp"/>
+	<resolution>15kHz</resolution><rotation>vertical</rotation><flip>yes</flip>
+	<players>2</players><joystick>8-way</joystick><num_buttons>2</num_buttons>
+	<buttons names="Fire,Dive/Climb,Start1P,Start2P,CoinA,CoinB,Service,Tilt" default="A,B,Start,Select,R,L,X,Y"/>
+	<switches default="DF,BF">
+		<!-- DSW0 -->
+		<dip bits="0,1" name="Coin A" ids="2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip bits="2,3" name="Coin B" ids="2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip bits="4" name="Diagnostics" ids="On,Off"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6" name="Invincibility" ids="On,Off"/>
+		<dip bits="7" name="Infinite" ids="On,Off"/>
+		<!-- DSW1 -->
+		<dip bits="8" name="Lives" ids="5,3"/>
+		<dip bits="9,10" name="Bonus Life" ids="40000,20000 80000,20000 60000,20000 40000"/>
+		<dip bits="11" name="Enemy Crafts" ids="Hard,Normal"/>
+		<dip bits="12" name="Enemy Missiles" ids="Hard,Normal"/>
+		<dip bits="13" name="Freeze" ids="On,Off"/>
+		<dip bits="14" name="Country" ids="Japan/US,Japan Only"/>
+		<dip bits="15" name="Unknown SW1-8" ids="On,Off"/>
+	</switches>
+	<rom index="0" zip="zaviga.zip" md5="none">
+		<!-- DELU v1, B-Wings engine, Zaviga variant, ROT90 -->
+		<part>44 45 4C 55 01 01 11 08 00 00 00 00 00 00 00 00</part>
+		<part repeat="0x4000">00</part>
+		<part name="as04.10a" crc="b79f5da2"/>
+		<part name="as02.7a" crc="6addd16a"/>
+		<part name="as00.4a" crc="c6ae4af0"/>
+		<part repeat="0xA000">00</part>
+		<part name="as08.10d" crc="b6187b3a"/>
+		<part name="as07.9d" crc="dc1170e3"/>
+		<part name="as06.7d" crc="ba888f84"/>
+		<part name="as05.13a" crc="afe9b0ac"/>
+		<part name="as14.5c" crc="62132c1d"/>
+		<part name="as11.1l" crc="aa84af24"/>
+		<part name="as12.1k" crc="84af9041"/>
+		<part name="as13.1h" crc="15d0922b"/>
+	</rom>
+	<rom index="1"></rom><rom index="2"></rom>
+	<rom index="3">
+		<part>
+			03 00 00 00 FF FF 00 08 00 08 00 01 11 11 40 00
+			00 00 0D 00 F0 34 20 00
+		</part>
+	</rom>
+	<nvram index="4" size="240"/>
+
+	<remark>Dual MC6809E B-Wings hardware; encrypted DECO16 sound ROM is nibble-swapped by the engine loader.</remark>
+</misterromdescription>
