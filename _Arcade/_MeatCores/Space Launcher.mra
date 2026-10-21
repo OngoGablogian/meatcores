@@ -7,7 +7,7 @@
   <setname>spacelnc</setname>
   <parent>spacelnc</parent>
   <mameversion>0289</mameversion>
-  <rbf>Nintendo8080</rbf>
+  <rbf>Arcade-Nintendo8080</rbf>
   <resolution>15kHz</resolution>
   <rotation>vertical (ccw)</rotation>
   <players>2 (alternating)</players>
