@@ -1,0 +1,65 @@
+<misterromdescription>
+    <name>Cobra-Command (World/US revision 4)</name>
+    <setname>cobracoma</setname>
+    <rbf>Arcade-DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1988</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="7F,FF">
+        <dip name="Coin A" bits="0,1" ids="3C/1C,2C/1C,1C/2C,1C/1C" />
+        <dip name="Coin B" bits="2,3" ids="3C/1C,2C/1C,1C/2C,1C/1C" />
+        <dip name="Unknown" bits="4" ids="On,Off" />
+        <dip name="Demo Sounds" bits="5" ids="Off,On" />
+        <dip name="Flip Screen" bits="6" ids="On,Off" />
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail" />
+        <dip name="Lives" bits="8,9" ids="99 (Cheat),5,4,3" />
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal" />
+        <dip name="Allow Continue" bits="12" ids="No,Yes" />
+        <dip name="Bonus Life" bits="13" ids="100k and 200k,50k and 150k" />
+    </switches>
+    <buttons names="Fire,Missile,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-" />
+    <rom index="1">
+        <part>41</part>
+    </rom>
+    <rom index="0" zip="cobracoma.zip|cobracom.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="el11-4.5j" crc="6dca6734" offset="0x0" length="0x8000" />
+        <part name="el12-4.7j" crc="7a44ef38" offset="0x0" length="0x10000" />
+        <part name="el13.9j" crc="04505acb" offset="0x0" length="0x10000" />
+        <part repeat="0x38000">00</part>
+        <part name="el10-4.1f" crc="edfad118" offset="0x0" length="0x8000" />
+        <part repeat="0x11000">00</part>
+        <part name="eh15.12f" crc="279e540c" offset="0x0" length="0x200" />
+        <part repeat="0x7EE00">00</part>
+        <interleave output="32">
+            <part name="el05.15a" crc="1c4f6033" offset="0x0" length="0x10000" map="0001" />
+            <part name="el06.16a" crc="d24ba794" offset="0x0" length="0x10000" map="0010" />
+            <part name="el04.13a" crc="d80a49ce" offset="0x0" length="0x10000" map="0100" />
+            <part name="el07.18a" crc="6d771fc3" offset="0x0" length="0x10000" map="1000" />
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="el00-4.2a" crc="122da2a8" offset="0x0" length="0x10000" map="0001" />
+            <part name="el01-4.3a" crc="27bf705b" offset="0x0" length="0x10000" map="0010" />
+            <part name="el02-4.5a" crc="c86fede6" offset="0x0" length="0x10000" map="0100" />
+            <part name="el03-4.6a" crc="1d8a855b" offset="0x0" length="0x10000" map="1000" />
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="el14.14j" crc="47246177" offset="0x0" length="0x2000" map="0001" />
+            <part name="el14.14j" crc="47246177" offset="0x4000" length="0x2000" map="0010" />
+            <part repeat="0x2000" map="0100">00</part>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+        <part repeat="0x18000">00</part>
+        <interleave output="32">
+            <part name="el08.7d" crc="cb0dcf4c" offset="0x0" length="0x8000" map="0001" />
+            <part name="el09.9d" crc="1fae5be7" offset="0x0" length="0x8000" map="0010" />
+            <part name="el08.7d" crc="cb0dcf4c" offset="0x8000" length="0x8000" map="0100" />
+            <part name="el09.9d" crc="1fae5be7" offset="0x8000" length="0x8000" map="1000" />
+        </interleave>
+    </rom>
+</misterromdescription>

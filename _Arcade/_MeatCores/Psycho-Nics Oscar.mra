@@ -1,0 +1,68 @@
+<misterromdescription>
+    <name>Psycho-Nics Oscar (World revision 0)</name>
+    <setname>oscar</setname>
+    <rbf>Arcade-DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="7F,FF">
+        <dip name="Coin B" bits="0,1" ids="1C/6C,1C/4C,1C/3C,1C/2C" />
+        <dip name="Coin A" bits="2,3" ids="4C/1C,3C/1C,2C/1C,1C/1C" />
+        <dip name="Freeze Mode" bits="4" ids="On,Off" />
+        <dip name="Demo Sounds" bits="5" ids="Off,On" />
+        <dip name="Flip Screen" bits="6" ids="On,Off" />
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail" />
+        <dip name="Lives" bits="8,9" ids="Infinite (Cheat),1,5,3" />
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal" />
+        <dip name="Bonus Life" bits="12,13" ids="50k only,90k 240k 150k+,60k 160k 100k+,40k 100k 60k+" />
+        <dip name="Invulnerability (Cheat)" bits="14" ids="On,Off" />
+        <dip name="Allow Continue" bits="15" ids="No,Yes" />
+    </switches>
+    <buttons names="Shoot,Jump,Power-Up,-,-,Start,Coin,Service,Pause" default="A,B,X,-,-,Start,Select,-,-" />
+    <rom index="1">
+        <part>40</part>
+    </rom>
+    <rom index="0" zip="oscar.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="du10" crc="120040d8" offset="0x0" length="0x8000" />
+        <part name="ed09" crc="e2d4bba9" offset="0x0" length="0x10000" />
+        <part repeat="0x30000">00</part>
+        <part name="du11" crc="ff45c440" offset="0x0" length="0x10000" />
+        <part repeat="0x8000">00</part>
+        <part name="ed12" crc="432031c5" offset="0x0" length="0x8000" />
+        <part repeat="0x90000">00</part>
+        <interleave output="32">
+            <part name="ed01" crc="d3a58e9e" offset="0x0" length="0x10000" map="0001" />
+            <part name="ed03" crc="4fc4fb0f" offset="0x0" length="0x10000" map="0010" />
+            <part name="ed00" crc="ac201f2d" offset="0x0" length="0x10000" map="0100" />
+            <part name="ed02" crc="7ddc5651" offset="0x0" length="0x10000" map="1000" />
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="ed04" crc="416a791b" offset="0x0" length="0x10000" map="0001" />
+            <part name="ed05" crc="fcdba431" offset="0x0" length="0x10000" map="0010" />
+            <part name="ed06" crc="7d50bebc" offset="0x0" length="0x10000" map="0100" />
+            <part name="ed07" crc="8fdf0fa5" offset="0x0" length="0x10000" map="1000" />
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="ed08" crc="308ac264" offset="0x1000" length="0x1000" map="0001" />
+            <part name="ed08" crc="308ac264" offset="0x2000" length="0x1000" map="0010" />
+            <part name="ed08" crc="308ac264" offset="0x3000" length="0x1000" map="0100" />
+            <part repeat="0x1000" map="1000">00</part>
+        </interleave>
+        <interleave output="32">
+            <part name="ed08" crc="308ac264" offset="0x2000" length="0x1000" map="0001" />
+            <part name="ed08" crc="308ac264" offset="0x3000" length="0x1000" map="0010" />
+            <part repeat="0x1000" map="0100">00</part>
+            <part repeat="0x1000" map="1000">00</part>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 07 5A 00 46 00 33 00 00 00 06 00 03 00 09</part>
+    </rom>
+    <nvram index="4" size="73" />
+</misterromdescription>

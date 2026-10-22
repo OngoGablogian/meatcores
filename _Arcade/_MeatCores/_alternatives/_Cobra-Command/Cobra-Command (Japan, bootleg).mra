@@ -1,0 +1,68 @@
+<misterromdescription>
+    <name>Cobra-Command (Japan, bootleg)</name>
+    <setname>cobracomjb</setname>
+    <rbf>Arcade-DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1988</year>
+    <manufacturer>bootleg</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="7F,FF">
+        <dip name="Coin A" bits="0,1" ids="3C/1C,2C/1C,1C/2C,1C/1C" />
+        <dip name="Coin B" bits="2,3" ids="3C/1C,2C/1C,1C/2C,1C/1C" />
+        <dip name="Unknown" bits="4" ids="On,Off" />
+        <dip name="Demo Sounds" bits="5" ids="Off,On" />
+        <dip name="Flip Screen" bits="6" ids="On,Off" />
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail" />
+        <dip name="Lives" bits="8,9" ids="99 (Cheat),5,4,3" />
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal" />
+        <dip name="Allow Continue" bits="12" ids="No,Yes" />
+        <dip name="Bonus Life" bits="13" ids="100k and 200k,50k and 150k" />
+    </switches>
+    <buttons names="Fire,Missile,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-" />
+    <rom index="1">
+        <part>41</part>
+    </rom>
+    <rom index="0" zip="cobracomjb.zip|cobracom.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="cobra4.bin" crc="868637e1" offset="0x0" length="0x8000" />
+        <part name="cobra3.bin" crc="7c878a83" offset="0x0" length="0x10000" />
+        <part name="cobra2.bin" crc="04505acb" offset="0x0" length="0x10000" />
+        <part repeat="0x38000">00</part>
+        <part name="cobra5.bin" crc="62ca5e89" offset="0x0" length="0x8000" />
+        <part repeat="0x11000">00</part>
+        <part name="63s481n.3" crc="279e540c" offset="0x0" length="0x200" />
+        <part name="am27s21pc.1" crc="9f6aa3e5" offset="0x0" length="0x100" />
+        <part name="am27s21pc.2" crc="af46d1ee" offset="0x0" length="0x100" />
+        <part name="am27s21pc.3" crc="1e4189e8" offset="0x0" length="0x100" />
+        <part repeat="0x7EB00">00</part>
+        <interleave output="32">
+            <part name="cob13.bin" crc="1c4f6033" offset="0x0" length="0x10000" map="0001" />
+            <part name="cob12.bin" crc="d24ba794" offset="0x0" length="0x10000" map="0010" />
+            <part name="cob11.bin" crc="d80a49ce" offset="0x0" length="0x10000" map="0100" />
+            <part name="cob10.bin" crc="6d771fc3" offset="0x0" length="0x10000" map="1000" />
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="cob17.bin" crc="d96b6797" offset="0x0" length="0x10000" map="0001" />
+            <part name="cob16.bin" crc="3fef9c02" offset="0x0" length="0x10000" map="0010" />
+            <part name="cob15.bin" crc="bfae6c34" offset="0x0" length="0x10000" map="0100" />
+            <part name="cob14.bin" crc="d56790f8" offset="0x0" length="0x10000" map="1000" />
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="cobra1.bin" crc="47246177" offset="0x0" length="0x2000" map="0001" />
+            <part name="cobra1.bin" crc="47246177" offset="0x4000" length="0x2000" map="0010" />
+            <part repeat="0x2000" map="0100">00</part>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+        <part repeat="0x18000">00</part>
+        <interleave output="32">
+            <part name="cobra6.bin" crc="c991298f" offset="0x0" length="0x8000" map="0001" />
+            <part name="cobra8.bin" crc="6bcc5982" offset="0x0" length="0x8000" map="0010" />
+            <part name="cobra7.bin" crc="f5e267e5" offset="0x0" length="0x8000" map="0100" />
+            <part name="cobra9.bin" crc="c90443b5" offset="0x0" length="0x8000" map="1000" />
+        </interleave>
+    </rom>
+</misterromdescription>

@@ -1,0 +1,69 @@
+<misterromdescription>
+    <name>Cobra-Command (Japan)</name>
+    <setname>cobracomj</setname>
+    <rbf>Arcade-DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1988</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="7F,FF">
+        <dip name="Coin A" bits="0,1" ids="3C/1C,2C/1C,1C/2C,1C/1C" />
+        <dip name="Coin B" bits="2,3" ids="3C/1C,2C/1C,1C/2C,1C/1C" />
+        <dip name="Unknown" bits="4" ids="On,Off" />
+        <dip name="Demo Sounds" bits="5" ids="Off,On" />
+        <dip name="Flip Screen" bits="6" ids="On,Off" />
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail" />
+        <dip name="Lives" bits="8,9" ids="99 (Cheat),5,4,3" />
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal" />
+        <dip name="Allow Continue" bits="12" ids="No,Yes" />
+        <dip name="Bonus Life" bits="13" ids="100k and 200k,50k and 150k" />
+    </switches>
+    <buttons names="Fire,Missile,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-" />
+    <rom index="1">
+        <part>41</part>
+    </rom>
+    <rom index="0" zip="cobracomj.zip|cobracom.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="eh11.5j" crc="868637e1" offset="0x0" length="0x8000" />
+        <part name="eh12.7j" crc="7c878a83" offset="0x0" length="0x10000" />
+        <part name="el13.9j" crc="04505acb" offset="0x0" length="0x10000" />
+        <part repeat="0x38000">00</part>
+        <part name="eh10.1f" crc="62ca5e89" offset="0x0" length="0x8000" />
+        <part repeat="0x11000">00</part>
+        <part name="eh15.12f" crc="279e540c" offset="0x0" length="0x200" />
+        <part repeat="0x7EE00">00</part>
+        <interleave output="32">
+            <part name="eh05.15a" crc="1c4f6033" offset="0x0" length="0x10000" map="0001" />
+            <part name="eh06.16a" crc="d24ba794" offset="0x0" length="0x10000" map="0010" />
+            <part name="eh04.13a" crc="d80a49ce" offset="0x0" length="0x10000" map="0100" />
+            <part name="eh07.18a" crc="6d771fc3" offset="0x0" length="0x10000" map="1000" />
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="eh00.2a" crc="d96b6797" offset="0x0" length="0x10000" map="0001" />
+            <part name="eh01.3a" crc="3fef9c02" offset="0x0" length="0x10000" map="0010" />
+            <part name="eh02.5a" crc="bfae6c34" offset="0x0" length="0x10000" map="0100" />
+            <part name="eh03.6a" crc="d56790f8" offset="0x0" length="0x10000" map="1000" />
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="eh14.14j" crc="47246177" offset="0x0" length="0x2000" map="0001" />
+            <part name="eh14.14j" crc="47246177" offset="0x4000" length="0x2000" map="0010" />
+            <part repeat="0x2000" map="0100">00</part>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+        <part repeat="0x18000">00</part>
+        <interleave output="32">
+            <part name="eh08.7d" crc="cb0dcf4c" offset="0x0" length="0x8000" map="0001" />
+            <part name="eh09.9d" crc="1fae5be7" offset="0x0" length="0x8000" map="0010" />
+            <part name="eh08.7d" crc="cb0dcf4c" offset="0x8000" length="0x8000" map="0100" />
+            <part name="eh09.9d" crc="1fae5be7" offset="0x8000" length="0x8000" map="1000" />
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 06 C6 00 1E 00 54 00 00 01 35 00 03 00 76</part>
+    </rom>
+    <nvram index="4" size="33" />
+</misterromdescription>
