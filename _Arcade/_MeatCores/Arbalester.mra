@@ -1,34 +1,60 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
 <misterromdescription>
-<rotation>vertical (ccw)</rotation>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>vertical (ccw)</rotation>
     <name>Arbalester</name>
     <setname>arbalest</setname>
-    <mameversion>0289</mameversion>
+    <mameversion>0282</mameversion>
     <year>1989</year>
     <manufacturer>Jordan I.S. / Seta</manufacturer>
     <players>2</players>
-    <rbf>Arcade-Arbalester</rbf>
+    <rbf>jtarblst</rbf>
     <joystick>8</joystick>
     <region>World</region>
-    <rom index="0" zip="arbalest.zip" md5="None" address="0x30000000" asm_md5="073d6afb7ef99a79959125927419362e">
-
+    <rom index="0" zip="arbalest.zip" md5="None" address="0x30000000">
+        <!-- Seta downtown.cpp (metafox-class) family header, decoded in jtarbalest_game.v.
+        byte 0 = game_id (0=metafox, 1=arbalest). Bytes 1..15 reserved. -->
         <part>
             01 00 00 00 00 00 00 00
             00 00 00 00 00 00 00 00
         </part>
-
+        <!-- maincpu - starts at 0x0 - length 0xA0000 (20 bits) -->
         <interleave output="16">
             <part name="uk-001-004" crc="902bb4e3" map="01"/>
             <part name="uk-001-003" crc="ee878a2c" map="10"/>
         </interleave>
         <part repeat="0x20000"> FF</part>
-
-<part name="uk6005" crc="48c73a4a"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- sub - starts at 0xA0000 - length 0x40000 (18 bits) -->
+        <part name="uk6005" crc="48c73a4a"/>
         <part repeat="0x3C000"> FF</part>
-
-<part name="uk-001-015-t31" crc="ce9df5dd"/>
+        <!-- PCM_START -->
+        <!-- x1snd - starts at 0xE0000 - length 0x100000 (20 bits) -->
+        <part name="uk-001-015-t31" crc="ce9df5dd"/>
         <part name="uk-001-014-t30" crc="016b844a"/>
-
-<interleave output="16">
+        <!-- JTFRAME_BA2_START -->
+        <!-- tiles - starts at 0x1E0000 - length 0x200000 (21 bits) -->
+        <interleave output="16">
             <part name="uk-001-010-t26" crc="c1e2f823" map="01"/>
             <part name="uk-001-012-t28" crc="818a4085" map="10"/>
         </interleave>
@@ -36,17 +62,19 @@
             <part name="uk-001-011-t27" crc="09dfe56a" map="01"/>
             <part name="uk-001-013-t29" crc="771fa164" map="10"/>
         </interleave>
-
-<interleave output="32">
+        <!-- JTFRAME_BA3_START -->
+        <!-- sprites - starts at 0x3E0000 - length 0x100000 (20 bits) -->
+        <interleave output="32">
             <part name="uk001.06" crc="11c75746" map="0001"/>
             <part name="uk001.07" crc="01b166c7" map="0010"/>
             <part name="uk001.08" crc="78d60ba3" map="0100"/>
             <part name="uk001.09" crc="b4748ae0" map="1000"/>
         </interleave>
-
+        <!-- Total 0x4E0000 bytes - 4992 kBytes -->
     </rom>
-
-<rom index="1">
+    
+    <!-- Vertical screen. Orientation reversed. -->
+    <rom index="1">
         <part>05 80</part>
     </rom>
     <switches page_id="1" page_name="DIP Switches" base="16" default="ff,ff">
@@ -65,7 +93,8 @@
     </switches>
     <buttons names="Shot,Bomb,Start,Coin" default="A,B,Start,Select" count="2"/>
 
-<rom index="3" md5="none"><part>02dc6c00ffff00020002000100ff040000f018cd8b001400</part></rom>
+    <!-- Standard Hiscore configuration; requires the matching qualified core. -->
+    <rom index="3" md5="none"><part>02dc6c00ffff00020002000100ff040000f018cd8b001400</part></rom>
     <rom index="4"/>
     <nvram index="4" size="139"/>
 </misterromdescription>
