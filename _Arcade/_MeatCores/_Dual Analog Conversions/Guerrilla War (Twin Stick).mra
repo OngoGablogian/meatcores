@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Guerrilla War (US)</name>
+  <setname>gwar</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1987</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Fire,Grenade,Start,Coin,Pause,Service Credit,Test,Aim Left,Aim Right" default="A,B,Start,Select,X,Y,L,R,-" count="2" />
+  <rom index="1">
+    <part>13</part>
+  </rom>
+  <rom index="0" zip="gwar.zip" md5="9982e16b66172572a3382a22ca3859b8">
+    <!--maincpu at 000000: native bytes; slot padding FF-->
+    <part name="1.2g" crc="5bcfa7dc" length="0x10000" />
+    <!--sub at 010000: native bytes; slot padding FF-->
+    <part name="2.6g" crc="86d931bf" length="0x10000" />
+    <!--audiocpu at 020000: native bytes; slot padding FF-->
+    <part name="3.7g" crc="eb544ab9" length="0x10000" />
+    <!--tx_tiles at 030000: native bytes; slot padding FF-->
+    <part name="gw5.8p" crc="80f73e2e" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--bg_tiles at 040000: native bytes; slot padding FF-->
+    <part name="18.8x" crc="f1dcdaef" length="0x10000" />
+    <part name="19.8z" crc="326e4e5e" length="0x10000" />
+    <part name="gw20.8aa" crc="0aa70967" length="0x10000" />
+    <part name="21.8ac" crc="b7686336" length="0x10000" />
+    <!--sp16_tiles at 080000: native bytes; slot padding FF-->
+    <part name="gw6.2j" crc="58600f7d" length="0x10000" />
+    <part name="7.2l" crc="a3f9b463" length="0x10000" />
+    <part name="gw8.2m" crc="092501be" length="0x10000" />
+    <part name="gw9.2p" crc="25801ea6" length="0x10000" />
+    <!--sp32_tiles at 0C0000: native bytes; slot padding FF-->
+    <part name="16.2ab" crc="2b46edff" length="0x10000" />
+    <part name="17.2ad" crc="be19888d" length="0x10000" />
+    <part name="14.2y" crc="2d653f0c" length="0x10000" />
+    <part name="15.2aa" crc="ebbf3ba2" length="0x10000" />
+    <part name="12.2v" crc="aeb3707f" length="0x10000" />
+    <part name="13.2w" crc="0808f95f" length="0x10000" />
+    <part name="10.2s" crc="8dfc7b87" length="0x10000" />
+    <part name="11.2t" crc="06822aac" length="0x10000" />
+    <!--proms at 140000: native bytes; slot padding FF-->
+    <part name="3.9w" crc="090236a3" length="0x400" />
+    <part name="2.9v" crc="9147de69" length="0x400" />
+    <part name="1.9u" crc="7f9c839e" length="0x400" />
+    <part repeat="0xF400">FF</part>
+    <!--ym2 at 150000: native bytes; slot padding FF-->
+    <part name="4.2j" crc="2255f8dd" length="0x10000" />
+  </rom>
+  <switches base="16" default="3B,FB">
+    <dip name="Allow Continue" bits="0" ids="No,Yes" values="0,1" />
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0" />
+    <dip name="Lives" bits="3" ids="3,5" values="1,0" />
+    <dip name="Coin A" bits="4,5" ids="4C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1C/2Cr,1C/3Cr,1C/4Cr,1C/6Cr" values="0,1,2,3" />
+    <dip name="Difficulty" bits="8,9" ids="Easy,Normal,Hard,Hardest" values="3,2,1,0" />
+    <dip name="Game Mode" bits="10,11" ids="Demo Sounds Off,Demo Sounds On,Freeze,Infinite Lives" values="3,2,0,1" />
+    <dip name="Unused" bits="14" ids="Off,On" values="1,0" />
+    <dip name="Unused" bits="15" ids="Off,On" values="1,0" />
+    <dip name="Bonus Repeat" bits="2" ids="Repeated,First Awards" values="0,1" />
+    <dip name="Bonus" bits="12,13" ids="None,50k 100k,40k 80k,30k 60k" values="0,1,2,3" />
+    <!--Bonus Repeat is DSW1 bit2 and Bonus is DSW2 bits4-5 (MAME synthetic BONUS port 0x34 split across two banks).-->
+  </switches>
+  <rom index="254">
+    <part>3B FB</part>
+  </rom>
+  <rom index="3" md5="0a1ca775dd84d2ca6d9690b3b5cd2740">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 E4 B9 50 00 52 00 00 00 E3 AE 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="83" />
+</misterromdescription>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Ikari Warriors (US JAMMA)</name>
+  <setname>ikari</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1986</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Fire,Grenade,Start,Coin,Pause,Service Credit,Aim Left,Aim Right" default="A,B,Start,Select,X,Y,L,R" count="2" />
+  <rom index="1">
+    <part>0E</part>
+  </rom>
+  <rom index="0" zip="ikari.zip" md5="3ac5cbcd45c1304ad04a7fd22f69a783">
+    <!--maincpu at 000000-->
+    <part name="1.4p" crc="52a8b2dd" length="0x10000" />
+    <!--sub at 010000-->
+    <part name="2.8p" crc="45364d55" length="0x10000" />
+    <!--audiocpu at 020000-->
+    <part name="3.7k" crc="56a26699" length="0x10000" />
+    <!--tx_tiles at 030000-->
+    <part name="p7.3b" crc="a7eb4917" length="0x4000" />
+    <part repeat="0xC000">FF</part>
+    <!--bg_tiles at 040000-->
+    <part name="p17.4d" crc="e0dba976" length="0x8000" />
+    <part name="p18.2d" crc="24947d5f" length="0x8000" />
+    <part name="p19.4b" crc="9ee59e91" length="0x8000" />
+    <part name="p20.2b" crc="5da7ec1a" length="0x8000" />
+    <part repeat="0x20000">FF</part>
+    <!--sp16_tiles at 080000-->
+    <part name="p8.3d" crc="9827c14a" length="0x8000" />
+    <part name="p9.3f" crc="545c790c" length="0x8000" />
+    <part name="p10.3h" crc="ec9ba07e" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--sp32_tiles at 0A0000-->
+    <part name="p11.4m" crc="5c75ea8f" length="0x8000" />
+    <part name="p14.2m" crc="3293fde4" length="0x8000" />
+    <part name="p12.4p" crc="95138498" length="0x8000" />
+    <part name="p15.2p" crc="65a61c99" length="0x8000" />
+    <part name="p13.4r" crc="315383d7" length="0x8000" />
+    <part name="p16.2r" crc="e9b03e07" length="0x8000" />
+    <part repeat="0x10000">FF</part>
+    <part repeat="0x40000">FF</part>
+    <!--proms at 120000-->
+    <part name="a6002-1.1k" crc="b9bf2c2c" length="0x400" />
+    <part name="a6002-2.2l" crc="0703a770" length="0x400" />
+    <part name="a6002-3.1l" crc="0a11cdde" length="0x400" />
+  </rom>
+  <switches base="16" default="3F,7B">
+    <dip name="Allow Killing Each Other" bits="0" ids="No,Yes" values="1,0" />
+    <dip name="P1 &amp; P2 Fire Buttons" bits="1" ids="Common,Separate" values="0,1" />
+    <dip name="Lives" bits="3" ids="5,3" values="0,1" />
+    <dip name="Coin A" bits="4,5" ids="4C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1C/2Cr,1C/3Cr,1C/4Cr,1C/6Cr" values="0,1,2,3" />
+    <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Normal,Easy" values="0,1,2,3" />
+    <dip name="Game Mode" bits="10,11" ids="Infinite Lives,Freeze,Demo Sounds On,Demo Sounds Off" values="0,1,2,3" />
+    <dip name="Allow Continue" bits="15" ids="Yes,No" values="0,1" />
+    <dip name="Bonus Repeat" bits="2" ids="First Awards,Repeated" values="0,1" />
+    <dip name="Bonus Life" bits="12,13" ids="None,100k 200k,60k 120k,50k 100k" values="0,1,2,3" />
+  </switches>
+  <rom index="254">
+    <part>3F 7B</part>
+  </rom>
+  <rom index="3" md5="1a34beb9b0e3f284e5f2932f665c10d7">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 FF 0B 50 00 49 00 00 00 FC 5F 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="83" />
+</misterromdescription>

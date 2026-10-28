@@ -1,0 +1,48 @@
+<misterromdescription>
+    <name>Mad Planets (UK) (Twin Stick)</name>
+    <mameversion>0289</mameversion>
+    <setname>mplanetsuk</setname>
+    <mratimestamp>20201231150731</mratimestamp>
+    <year>1983</year>
+    <manufacturer>Gottlieb</manufacturer>
+    <category>Platform</category>
+    <rotation>vertical (ccw)</rotation>
+    <rbf>Arcade-MadPlanetsTwinStick</rbf>
+    <buttons names="Fire,Start 1P,Start 2P,Coin,Pause,Service Select" default="A,Start,Select,R,B,L" />
+    <switches default="01">
+        <dip bits="0" name="Demo Sounds" ids="On,Off" />
+        <dip bits="1" name="Bonus Life" ids="Every 10000,Every 12000" />
+        <dip bits="3" name="Allow Round Select" ids="No,Yes" />
+        <dip bits="5" name="Lives" ids="3,5" />
+        <dip bits="6,7" name="Difficulty" ids="Standard,Easy,Hard,Very Hard" />
+    </switches>
+    <rom index="1">
+        <part>2</part>
+    </rom>
+    <rom index="0" zip="mplanetsuk.zip|mplanets.zip" md5="None">
+        <part crc="709aa24c" name="mpt_bg0.bin" />
+        <part crc="4921e345" name="mpt_bg1.bin" />
+        <part crc="a9e30ad2" name="mpt_rom0.bin" />
+        <part crc="94d67b87" name="mpt_rom1.bin" />
+        <part crc="846ddc23" name="mpt_rom2.bin" />
+        <part crc="dc355b2d" name="mpt_rom3.bin" />
+        <part crc="cd88e23c" name="mpt_rom4.bin" />
+        <part crc="a920e325" name="mpt_fg0.bin" />
+        <part crc="a920e325" name="mpt_fg0.bin" />
+        <part crc="6456cc1c" name="mpt_fg1.bin" />
+        <part crc="6456cc1c" name="mpt_fg1.bin" />
+        <part crc="735e2522" name="mpt_fg2.bin" />
+        <part crc="735e2522" name="mpt_fg2.bin" />
+        <part crc="c990b39f" name="mpt_fg3.bin" />
+        <part crc="c990b39f" name="mpt_fg3.bin" />
+        <part crc="453193a1" name="mpt_snd1.bin" />
+        <part crc="f5ffc98f" name="mpt_snd2.bin" />
+    </rom>
+    <nvram index="4" size="4096" />
+    <rom index="3" md5="none">
+        <part>
+11 E1 A3 00 FF FF 00 02 00 02 00 01 FF FF 04 00
+00 00 00 00 10 00 3C 00
+</part>
+    </rom>
+</misterromdescription>
