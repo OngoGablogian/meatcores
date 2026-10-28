@@ -1,0 +1,66 @@
+<misterromdescription>
+	<name>Jackal</name>
+	<region>World</region>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<version>Rotary Joystick</version>
+	<alternative></alternative>
+	<platform></platform>
+	<series></series>
+	<year>1986</year>
+	<manufacturer>Konami</manufacturer>
+	<category>Shooter - Multidirectional</category>
+
+	<setname>jackalr</setname>
+	<parent>jackal</parent>
+	<mameversion>0289</mameversion>
+	<rbf>Arcade-JackalTwinStick</rbf>
+	<about author="Ace" twitter="@Ace9921Tweets"></about>
+
+	<resolution>15kHz</resolution>
+	<rotation>vertical (cw)</rotation>
+	<flip>no</flip>
+
+	<players>2 (simultaneous)</players>
+	<joystick>8-way</joystick>
+	<special_controls>Rotary joystick / right analog stick</special_controls>
+	<num_buttons>2</num_buttons>
+	<buttons default="B,A,L,R,Start,Select,X" names="Machine Gun,Grenades/Rockets,Rotate Left,Rotate Right,Start,Coin,Pause"></buttons>
+	
+	<switches default="00,a1,04"><dip bits="0,3" name="Coin A" ids="1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits,1 Coin/7 Credits,2 Coins/1 Credit,2 Coins/3 Credits,2 Coins/5 Credits,3 Coins/1 Credit,3 Coins/2 Credits,3 Coins/4 Credits,4 Coins/1 Credit,4 Coins/3 Credits,Free Play" /><dip bits="4,7" name="Coin B" ids="1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits,1 Coin/7 Credits,2 Coins/1 Credit,2 Coins/3 Credits,2 Coins/5 Credits,3 Coins/1 Credit,3 Coins/2 Credits,3 Coins/4 Credits,4 Coins/1 Credit,4 Coins/3 Credits,No Coin B" /><dip bits="8,9" name="Lives" ids="2,3,4,7" /><dip bits="11,12" name="Bonus Life" ids="30K 150K,50K 200K,30K,50K" /><dip bits="13,14" name="Difficulty" ids="Easy,Normal,Difficult,Very Difficult" /><dip bits="15" name="Demo Sounds" ids="Off,On" /><dip bits="16" name="Flip Screen" ids="Off,On" /><dip bits="18" name="Sound mode" ids="Mono,Stereo" /></switches>
+	
+	<rom index="1">
+		<part>10</part>
+	</rom>
+	<rom index="0" md5="1148abbd130db586b687dda0d3482ac6" type="merged" zip="jackalr.zip|jackal.zip">
+		<part crc="ed2a7d66" name="631_q02.15d"/>
+		<part crc="b9d34836" name="631_q03.16d"/>
+		<part crc="b9d34836" name="631_q03.16d"/>
+		<part crc="54aa2d29" name="631_q01.11d"/>
+		<part crc="bcf5d0a8" name="631_q05.7h"/>
+		<part crc="e1e9aa42" name="631_q04.7h"/>
+		<part crc="4cb5df22" name="631_q06.8h"/>
+		<part crc="cc68c5b8" name="631_q07.8h"/>
+		<part crc="55ea6852" name="631_q09.12h"/>
+		<part crc="d2492b8b" name="631_q08.12h"/>
+		<part crc="fe93e217" name="631_q10.13h"/>
+		<part crc="563ae24c" name="631_q11.13h"/>
+		<part crc="7553a172" name="631r08.9h"/>
+		<part crc="a74dd86c" name="631r09.14h"/>
+	</rom>
+	<rom index="2"></rom>
+	<rom index="3" md5="none">
+		<part>
+			11 90 00 00 00 FF 00 02 00 02 00 01 00 FF FF 00
+			00 00 72 F8 00 27 00 1D 00 00 73 40 00 03 00 00
+			00 00 73 41 00 01 02 02
+		</part>
+	</rom>
+	<rom index="4"></rom>
+
+	<nvram index="4" size="43"></nvram>
+
+	<remark></remark>
+
+	<mratimestamp>20210708094853</mratimestamp>
+</misterromdescription>
