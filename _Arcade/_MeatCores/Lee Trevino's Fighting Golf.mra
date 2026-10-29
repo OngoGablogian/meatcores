@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Lee Trevino's Fighting Golf (World?)</name>
+  <setname>fitegolf</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1988</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <joystick ways="8" />
+  <buttons names="Swing,Select Club,Start,Coin,Pause,Service" default="A,B,Start,Select,X,Y" count="2" />
+  <rom index="1">
+    <part>09</part>
+  </rom>
+  <rom index="0" zip="fitegolf.zip">
+    <!--maincpu (A) at 000000; unused tail FF-->
+    <part name="gu2.4p" crc="19be7ad6" length="0x4000" />
+    <part name="gu1.4m" crc="bc32568f" length="0x8000" />
+    <part repeat="0x4000">FF</part>
+    <!--sub (B) at 010000-->
+    <part name="gu6.8p" crc="2b9978c5" length="0x4000" />
+    <part name="gu5.8m" crc="ea3d138c" length="0x8000" />
+    <part repeat="0x4000">FF</part>
+    <!--audiocpu (S) at 020000-->
+    <part name="gu3.6g" crc="811b87d7" length="0x4000" />
+    <part name="gu4.6k" crc="2d998e2b" length="0x8000" />
+    <part repeat="0x4000">FF</part>
+    <!--tx_tiles at 030000 (16K window; tnk3 8K chip repeated as MAME ROM_RELOAD)-->
+    <part name="gu8.2d" crc="f1628dcf" length="0x4000" />
+    <part repeat="0xc000">FF</part>
+    <!--bg_tiles at 040000 (32K window)-->
+    <part name="gu7.2b" crc="4655f94e" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--sp16 planes at 050000/058000/060000, raw chip order (MAME region thirds), each chip padded to 32K-->
+    <part name="gu9.2p" crc="d4957ec5" length="0x8000" />
+    <part name="gu10.2rs" crc="b3acdac2" length="0x8000" />
+    <part name="gu11.2t" crc="b99cf73b" length="0x8000" />
+    <!--proms at 068000: R, G, B 0x400 each-->
+    <part name="3.2c" crc="6e4c7836" length="0x400" />
+    <part name="1.1b" crc="29e7986f" length="0x400" />
+    <part name="2.1c" crc="27ba9ff9" length="0x400" />
+  </rom>
+  <switches base="16" default="3F,FF">
+    <dip name="Language" bits="0" ids="Japanese,English" values="0,1" />
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0" />
+    <dip name="Cabinet" bits="2" ids="Cocktail,Upright" values="0,1" />
+    <dip name="Gameplay (English)" bits="3" ids="Basic Player,Avid Golfer" values="0,1" />
+    <dip name="Coin A" bits="4,5" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/6 Credits" values="0,1,2,3" />
+    <dip name="Shot Time" bits="8" ids="Short (10 sec),Long (12 sec)" values="0,1" />
+    <dip name="Bonus Holes" bits="9" ids="Less (Par 0 Birdie 1 Eagle 2),More (Par 1 Birdie 2 Eagle 3)" values="0,1" />
+    <dip name="Game Mode" bits="10,11" ids="Freeze,Demo Sounds Off,Infinite Holes (Cheat),Demo Sounds On" values="0,1,2,3" />
+    <dip name="Play Holes" bits="12,13" ids="5,4,3,2" values="0,1,2,3" />
+    <dip name="Allow Continue" bits="14" ids="No,Yes" values="0,1" />
+    <dip name="Service Mode" bits="15" ids="On,Off" values="0,1" />
+  </switches>
+  <rom index="254">
+    <part>3F FF</part>
+  </rom>
+  <rom index="3" md5="28048299b63452b05172712216001129">
+    <part>00 00 FF FF 00 FF 00 01 00 02 00 01 11 11 00 00 00 00 FF 70 50 53 14 00</part>
+  </rom>
+  <nvram index="4" size="80" />
+</misterromdescription>

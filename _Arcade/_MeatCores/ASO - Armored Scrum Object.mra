@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>ASO - Armored Scrum Object</name>
+  <setname>aso</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1985</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Shot,Missile,Start,Coin,Pause,Service,Armor" default="A,B,Start,Select,X,Y,L" count="2" />
+  <rom index="1">
+    <part>06</part>
+  </rom>
+  <rom index="0" zip="aso.zip">
+    <!--maincpu (A) at 000000; unused tail FF-->
+    <part name="p1.8d" crc="84981f3c" length="0x4000" />
+    <part name="p2.7d" crc="cfe912a6" length="0x4000" />
+    <part name="p3.5d" crc="39a666d2" length="0x4000" />
+    <part repeat="0x4000">FF</part>
+    <!--sub (B) at 010000-->
+    <part name="p4.3d" crc="a4122355" length="0x4000" />
+    <part name="p5.2d" crc="9879e506" length="0x4000" />
+    <part name="p6.1d" crc="c0bfdf1f" length="0x4000" />
+    <part repeat="0x4000">FF</part>
+    <!--audiocpu (S) at 020000-->
+    <part name="p7.4f" crc="dbc19736" length="0x4000" />
+    <part name="p8.3f" crc="537726a9" length="0x4000" />
+    <part name="p9.2f" crc="aef5a4f4" length="0x4000" />
+    <part repeat="0x4000">FF</part>
+    <!--tx_tiles at 030000 (16K window; tnk3 8K chip repeated as MAME ROM_RELOAD)-->
+    <part name="p14.1h" crc="8baa2253" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--bg_tiles at 040000 (32K window)-->
+    <part name="p10.14h" crc="00dff996" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--sp16 planes at 050000/058000/060000, raw chip order (MAME region thirds), each chip padded to 32K-->
+    <part name="p11.11h" crc="7feac86c" length="0x8000" />
+    <part name="p12.9h" crc="6895990b" length="0x8000" />
+    <part name="p13.8h" crc="87a81ce1" length="0x8000" />
+    <!--proms at 068000: R, G, B 0x400 each-->
+    <part name="mb7122h.12f" crc="5b0a0059" length="0x400" />
+    <part name="mb7122h.13f" crc="37e28dd8" length="0x400" />
+    <part name="mb7122h.14f" crc="c3fd1dd3" length="0x400" />
+  </rom>
+  <switches base="16" default="FC,F7">
+    <dip name="Bonus Life" bits="6,8" ids="50k 100k 100k+,60k 120k 120k+,100k 200k 200k+,50k 100k,60k 120k,100k 200k,None" values="7,6,5,3,2,1,0" />
+    <dip name="Allow Continue" bits="0" ids="3 Times,No" values="0,1" />
+    <dip name="Cabinet" bits="1" ids="Upright,Cocktail" values="0,1" />
+    <dip name="Lives" bits="2" ids="3,5" values="1,0" />
+    <dip name="Coinage" bits="3,5" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/6 Credits" values="4,5,6,7,3,2,1,0" />
+    <dip name="Difficulty" bits="9,10" ids="Easy,Normal,Hard,Hardest" values="3,2,1,0" />
+    <dip name="Demo Sounds" bits="11" ids="Off,On" values="1,0" />
+    <dip name="All Ships at Start (Cheat)" bits="12" ids="Off,On" values="1,0" />
+    <dip name="Flip Screen" bits="13" ids="Off,On" values="1,0" />
+    <dip name="Start Area" bits="14,15" ids="1,2,3,4" values="3,2,1,0" />
+  </switches>
+  <rom index="254">
+    <part>FC F7</part>
+  </rom>
+  <rom index="3" md5="983eefb70751a0dc4b35aa32a2ce9943">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 D8 3B 82 00 20 00 00 00 E7 77 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="133" />
+</misterromdescription>

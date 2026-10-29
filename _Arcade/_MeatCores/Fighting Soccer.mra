@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Fighting Soccer (version 4)</name>
+  <setname>fsoccer</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1988</year>
+  <manufacturer>SNK</manufacturer>
+  <players>4</players>
+  <rotation>horizontal</rotation>
+  <joystick ways="8" />
+  <buttons names="Kick,Loft Kick,Start Game A,Start Game B,Start Game C,Start Game D,Start Game E,Coin,Pause,Service Credit,Test" default="A,B,Start,L,R,L2,R2,Select,X,Y,L3" count="2" />
+  <rom index="1">
+    <part>11</part>
+  </rom>
+  <rom index="0" zip="fsoccer.zip" md5="f2341bf4c7242e7bed456c3b03adee2a">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="fs3_ver4.6c" crc="94c3f918" length="0x10000" />
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="fs1_ver4.2c" crc="97830108" length="0x10000" />
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="fs2.3j" crc="9ee54ea1" length="0x10000" />
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="fs13.4n" crc="0de7b7ad" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--bg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="fs14.8d" crc="38c38b40" length="0x10000" />
+    <part name="fs15.8e" crc="a614834f" length="0x10000" />
+    <part repeat="0x30000">00</part>
+    <!--sp32_tiles at 090000: native bytes; region holes 00, slot padding FF-->
+    <part name="fs12.2t" crc="b2442c30" length="0x10000" />
+    <part name="fs11.2s" crc="022f3e96" length="0x10000" />
+    <part name="fs10.2r" crc="e42864d8" length="0x10000" />
+    <part name="fs9.2p" crc="d8112aa6" length="0x10000" />
+    <part name="fs8.2n" crc="11156a7d" length="0x10000" />
+    <part name="fs7.2l" crc="d584964b" length="0x10000" />
+    <part name="fs6.2k" crc="588d14b3" length="0x10000" />
+    <part name="fs5.2j" crc="def2f1d8" length="0x10000" />
+    <!--proms at 110000: native bytes; region holes 00, slot padding FF-->
+    <part name="2.8e" crc="bf4ac706" length="0x400" />
+    <part name="1.8d" crc="1bac8010" length="0x400" />
+    <part name="3.9e" crc="dbeddb14" length="0x400" />
+    <part repeat="0xf400">FF</part>
+    <!--ym2 at 120000: native bytes; region holes 00, slot padding FF-->
+    <part name="fs4.7p" crc="435c3716" length="0x10000" />
+  </rom>
+  <rom index="3" md5="146806135fd703136ba61bf93885ac3a">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 E3 49 14 48 01 00</part>
+  </rom>
+  <nvram index="4" size="20" />
+  <switches base="16" default="37,FF">
+    <dip name="Cabinet" bits="0,1" ids="Upright VS,Upright no VS,Cocktail 2P,Cocktail 4P" values="3,2,0,1" />
+    <dip name="Version" bits="2,3" ids="Europe,USA,Japan" values="1,0,2" />
+    <dip name="Coin A" bits="4,5" ids="4C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1C/2Cr,1C/3Cr,1C/4Cr,1C/6Cr" values="0,1,2,3" />
+    <dip name="Allow Continue" bits="8" ids="No,Yes" values="0,1" />
+    <dip name="Flip Screen" bits="9" ids="Off,On" values="1,0" />
+    <dip name="Game Mode" bits="10,11" ids="Demo Sound Off,Demo Sound On,Freeze,Win vs CPU" values="2,3,0,1" />
+    <dip name="Play Time (Type A)" bits="12,14" ids="1:00,1:10,1:20,1:30,1:40,1:50,2:00,2:10" values="1,6,5,4,3,2,7,0" />
+    <dip name="Service Mode" bits="15" ids="Off,On" values="1,0" />
+  </switches>
+  <rom index="254">
+    <part>37 FF</part>
+  </rom>
+</misterromdescription>

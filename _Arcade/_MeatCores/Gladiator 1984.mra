@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Gladiator 1984</name>
+  <setname>sgladiat</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1984</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <joystick ways="8" />
+  <buttons names="Accelerate,Jump,Start,Coin,Pause,Service Credit,Test" default="A,B,Start,Select,X,Y,L" count="2" />
+  <rom index="1">
+    <part>04</part>
+  </rom>
+  <rom index="0" zip="sgladiat.zip" md5="40f2f4055a8bc9f5cc955382afecce71">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="glad.005" crc="4bc60f0b" length="0x4000" />
+    <part name="glad.004" crc="db557f46" length="0x4000" />
+    <part name="glad.003" crc="55ce82b4" length="0x2000" />
+    <part repeat="0x6000">00</part>
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="glad.002" crc="8350261c" length="0x4000" />
+    <part name="glad.001" crc="5ee9d3fb" length="0x4000" />
+    <part repeat="0x8000">00</part>
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="glad.007" crc="c25b6731" length="0x2000" />
+    <part name="glad.006" crc="2024d716" length="0x2000" />
+    <part repeat="0xc000">00</part>
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="glad.011" crc="305bb294" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--bg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="glad.012" crc="b7dd519f" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--sp16_tiles at 050000: native bytes; region holes 00, slot padding FF-->
+    <part name="glad.008" crc="bcf42587" length="0x2000" />
+    <part name="glad.009" crc="912a20e0" length="0x2000" />
+    <part name="glad.010" crc="8b1db3a5" length="0x2000" />
+    <part repeat="0xa000">FF</part>
+    <!--proms at 060000: native bytes; region holes 00, slot padding FF-->
+    <part name="82s137.001" crc="d9184823" length="0x400" />
+    <part name="82s137.002" crc="1a6b0953" length="0x400" />
+    <part name="82s137.003" crc="c0e70308" length="0x400" />
+    <part repeat="0xf400">FF</part>
+  </rom>
+  <rom index="3" md5="4dc92b085a4ef5685900913e94379b35">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 D9 B0 28 00 4B 00</part>
+  </rom>
+  <nvram index="4" size="40" />
+  <switches base="16" default="FD,F7">
+    <dip name="Unused" bits="0" ids="Off,On" values="1,0" />
+    <dip name="Cabinet" bits="1" ids="Upright,Cocktail" values="0,1" />
+    <dip name="Lives" bits="2" ids="3,5" values="1,0" />
+    <dip name="Coinage" bits="3,5" ids="5C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr,1C/2Cr,1C/3Cr,Free Play" values="2,4,3,7,6,5,0" />
+    <dip name="Time" bits="9" ids="More,Less" values="1,0" />
+    <dip name="Unused" bits="10" ids="Off,On" values="1,0" />
+    <dip name="Game Mode" bits="11,12" ids="Demo Sounds Off,Demo Sounds On,Freeze,Infinite Lives" values="3,2,0,1" />
+    <dip name="Flip Screen" bits="13" ids="Off,On" values="1,0" />
+    <dip name="Unknown" bits="14" ids="Off,On" values="1,0" />
+    <dip name="No Opponents (Cheat)" bits="15" ids="Off,On" values="1,0" />
+    <dip name="Bonus Repeat" bits="8" ids="Repeated,First Awards" values="1,0" />
+    <dip name="Bonus" bits="6,7" ids="None,50k 120k 120k+,40k 90k 90k+,20k 60k 60k+" values="0,1,2,3" />
+    <!--Bonus threshold labels show the repeated schedule; First Awards selects the finite award schedule. Exact source combinations are retained in the proof.-->
+  </switches>
+  <rom index="254">
+    <part>FD F7</part>
+  </rom>
+</misterromdescription>

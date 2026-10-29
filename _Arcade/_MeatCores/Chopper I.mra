@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Chopper I (US Ver 2)</name>
+  <setname>chopper</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1988</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Fire,Special Weapon,Start,Coin,Pause,Service Credit,Test" default="A,B,Start,Select,X,Y,L" count="2" />
+  <rom index="1">
+    <part>10</part>
+  </rom>
+  <rom index="0" zip="chopper.zip" md5="fc2f11953cd7199a8c5dc0e88d873a71">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="kk_a_ver2_1.8g" crc="dc325860" length="0x10000" />
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="kk_a_4.6g" crc="56d10ba3" length="0x10000" />
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="kk_3.3d" crc="dbaafb87" length="0x10000" />
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="kk5.8p" crc="defc0987" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--bg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="kk10.8y" crc="5cf4d22b" length="0x10000" />
+    <part name="kk_a_11.8z" crc="881ac259" length="0x10000" />
+    <part name="kk_a_12.8ab" crc="de96b331" length="0x10000" />
+    <part name="kk13.8ac" crc="2756817d" length="0x10000" />
+    <!--sp16_tiles at 080000: native bytes; region holes 00, slot padding FF-->
+    <part name="kk_a_9.3k" crc="106c2dcc" length="0x8000" />
+    <part name="kk_a_8.3l" crc="d4f88f62" length="0x8000" />
+    <part name="kk_a_7.3n" crc="28ae39f9" length="0x8000" />
+    <part name="kk_a_6.3p" crc="16774a36" length="0x8000" />
+    <!--sp32_tiles at 0A0000: native bytes; region holes 00, slot padding FF-->
+    <part name="kk18.3ab" crc="6abbff36" length="0x10000" />
+    <part name="kk19.2ad" crc="5283b4d3" length="0x10000" />
+    <part name="kk20.3y" crc="6403ddf2" length="0x10000" />
+    <part name="kk21.3aa" crc="9f411940" length="0x10000" />
+    <part name="kk14.3v" crc="9bad9e25" length="0x10000" />
+    <part name="kk15.3x" crc="89faf590" length="0x10000" />
+    <part name="kk16.3s" crc="efb1fb6c" length="0x10000" />
+    <part name="kk17.3t" crc="6b7fb0a5" length="0x10000" />
+    <!--proms at 120000: native bytes; region holes 00, slot padding FF-->
+    <part name="1.9w" crc="7f07a45c" length="0x400" />
+    <part name="3.9u" crc="15359fc3" length="0x400" />
+    <part name="2.9v" crc="79b50f7d" length="0x400" />
+    <part repeat="0xf400">FF</part>
+    <!--ym2 at 130000: native bytes; region holes 00, slot padding FF-->
+    <part name="kk2.3j" crc="06169ae0" length="0x10000" />
+    <!--plds at 140000: native bytes; region holes 00, slot padding FF-->
+    <part name="p-a1.2c" crc="311e5ae6" length="0x104" />
+    <part repeat="0xfc">00</part>
+    <!--NO_DUMP p-a2.10b: preserve unknown-mask placeholder, not known ROM bytes-->
+    <part repeat="0x144">FF</part>
+    <part repeat="0xbc">00</part>
+    <!--NO_DUMP p-k3.9t: preserve unknown-mask placeholder, not known ROM bytes-->
+    <part repeat="0x104">FF</part>
+    <part repeat="0xfc">00</part>
+    <!--NO_DUMP p-a4.4b: preserve unknown-mask placeholder, not known ROM bytes-->
+    <part repeat="0x104">FF</part>
+    <part repeat="0xfc">00</part>
+    <!--NO_DUMP p-a5.7a: preserve unknown-mask placeholder, not known ROM bytes-->
+    <part repeat="0x104">FF</part>
+    <part repeat="0x6fc">00</part>
+    <part repeat="0xf000">FF</part>
+  </rom>
+  <rom index="3" md5="791d3c4805938d0593482100c01e0d91">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 E4 C5 3C 00 4B 00 00 00 E4 62 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="63" />
+  <switches base="16" default="3B,FF">
+    <dip name="Flip Screen" bits="0" ids="Off,On" values="1,0" />
+    <dip name="Cabinet" bits="1" ids="Upright,Cocktail" values="1,0" />
+    <dip name="Lives" bits="3" ids="3,5" values="1,0" />
+    <dip name="Coin A" bits="4,5" ids="4C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1C/2Cr,1C/3Cr,1C/4Cr,1C/6Cr" values="0,1,2,3" />
+    <dip name="Difficulty" bits="8,9" ids="Easy,Normal,Hard,Hardest" values="2,3,1,0" />
+    <dip name="Game Mode" bits="10,11" ids="Demo Sounds Off,Demo Sounds On,Freeze,Infinite Lives" values="2,3,0,1" />
+    <dip name="Allow Continue" bits="14" ids="No,Yes" values="0,1" />
+    <dip name="Invulnerability (Cheat)" bits="15" ids="Off,On" values="1,0" />
+    <dip name="Bonus Repeat" bits="2" ids="Repeated,First Awards" values="0,1" />
+    <dip name="Bonus" bits="12,13" ids="None,100k 200k 200k+,75k 150k 150k+,50k 100k 100k+" values="0,1,2,3" />
+    <!--Bonus threshold labels show the repeated schedule; First Awards selects the finite award schedule. Exact source combinations are retained in the proof.-->
+  </switches>
+  <rom index="254">
+    <part>3B FF</part>
+  </rom>
+</misterromdescription>

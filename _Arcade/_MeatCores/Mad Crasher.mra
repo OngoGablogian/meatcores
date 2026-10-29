@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Mad Crasher</name>
+  <setname>madcrash</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1984</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <joystick ways="8" />
+  <buttons names="Fire,Jump,Start,Coin,Pause,Service Credit,Test" default="A,B,Start,Select,X,Y,L" count="2" />
+  <rom index="1">
+    <part>02</part>
+  </rom>
+  <rom index="0" zip="madcrash.zip" md5="122565fd0dc7c3f46ff42775d0896c66">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="p8.9a" crc="ecb2fdc9" length="0x2000" />
+    <part name="p9.11a" crc="0a87df26" length="0x2000" />
+    <part name="p10.12a" crc="6eb8a87c" length="0x2000" />
+    <part repeat="0xa000">00</part>
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="p4.5a" crc="5664d699" length="0x2000" />
+    <part name="p5.6a" crc="dea2865a" length="0x2000" />
+    <part name="p6.7a" crc="e25a9b9c" length="0x2000" />
+    <part name="p7.8a" crc="55b14a36" length="0x2000" />
+    <part name="p3.4a" crc="e3c8c2cb" length="0x2000" />
+    <part repeat="0x6000">00</part>
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="p1.6a" crc="2dcd036d" length="0x2000" />
+    <part name="p2.8a" crc="cc30ae8b" length="0x2000" />
+    <part repeat="0xc000">00</part>
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="p13.1f" crc="48c4ade0" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--fg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="p11.1a" crc="67174956" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--bg_tiles at 050000: native bytes; region holes 00, slot padding FF-->
+    <part name="p12.1c" crc="085094c1" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--sp16_tiles at 060000: native bytes; region holes 00, slot padding FF-->
+    <part name="p16.4l" crc="6153611a" length="0x2000" />
+    <part name="p15.2l" crc="a74149d4" length="0x2000" />
+    <part name="p14.1l" crc="07e807bc" length="0x2000" />
+    <part repeat="0xa000">FF</part>
+    <!--proms at 070000: native bytes; region holes 00, slot padding FF-->
+    <part name="3.3j" crc="d19e8a91" length="0x400" />
+    <part name="2.4j" crc="9fc325af" length="0x400" />
+    <part name="1.5j" crc="07678443" length="0x400" />
+    <part repeat="0xf400">FF</part>
+  </rom>
+  <rom index="3" md5="d824a505569d90e0a8440b83b6e3f228">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 C2 B3 4B 00 4B 00</part>
+  </rom>
+  <nvram index="4" size="75" />
+  <switches base="16" default="FD,F4">
+    <dip name="Unused" bits="0" ids="Off,On" values="1,0" />
+    <dip name="Cabinet" bits="1" ids="Upright,Cocktail" values="0,1" />
+    <dip name="Lives" bits="2" ids="3,5" values="1,0" />
+    <dip name="Coinage" bits="3,5" ids="5C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr,1C/2Cr,1C/3Cr,Free Play" values="2,4,3,7,6,5,0" />
+    <dip name="Bonus Life" bits="6,7" ids="20000 60000,40000 90000,50000 120000,None" values="3,2,1,0" />
+    <dip name="Bonus Repeat" bits="8" ids="1st+2nd+2nd+,1st+2nd only" values="1,0" />
+    <dip name="Scroll Speed" bits="9,10" ids="Slow,Normal,Fast,Faster" values="3,2,1,0" />
+    <dip name="Game mode" bits="11,12" ids="Demo Sounds Off,Demo Sounds On,Freeze,Infinite Lives" values="3,2,0,1" />
+    <dip name="Flip Screen" bits="13" ids="Off,On" values="1,0" />
+    <dip name="Difficulty" bits="14" ids="Easy,Hard" values="1,0" />
+    <dip name="Unknown" bits="15" ids="Off,On" values="1,0" />
+  </switches>
+  <rom index="254">
+    <part>FD F4</part>
+  </rom>
+</misterromdescription>

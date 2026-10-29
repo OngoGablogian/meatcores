@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Victory Road</name>
+  <setname>victroad</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1986</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Fire,Grenade,Start,Coin,Pause,Service Credit,Aim Left,Aim Right" default="A,B,Start,Select,X,Y,L,R" count="2" />
+  <rom index="1">
+    <part>12</part>
+  </rom>
+  <rom index="0" zip="victroad.zip" md5="913f9c739927d844b4bb92bb57464e1d">
+    <!--maincpu at 000000-->
+    <part name="p1.4p" crc="e334acef" length="0x10000" />
+    <!--sub at 010000-->
+    <part name="p2.8p" crc="907fac83" length="0x10000" />
+    <!--audiocpu at 020000-->
+    <part name="p3.7k" crc="bac745f6" length="0x10000" />
+    <!--tx_tiles at 030000-->
+    <part name="p7.3b" crc="2b6ed95b" length="0x4000" />
+    <part repeat="0xC000">FF</part>
+    <!--bg_tiles at 040000-->
+    <part name="p17.4c" crc="19d4518c" length="0x8000" />
+    <part name="p18.2c" crc="d818be43" length="0x8000" />
+    <part name="p19.4b" crc="d64e0f89" length="0x8000" />
+    <part name="p20.2b" crc="edba0f31" length="0x8000" />
+    <part repeat="0x20000">FF</part>
+    <!--sp16_tiles at 080000-->
+    <part name="p8.3d" crc="df7f252a" length="0x8000" />
+    <part name="p9.3f" crc="9897bc05" length="0x8000" />
+    <part name="p10.3h" crc="ecd3c0ea" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--sp32_tiles at 0A0000-->
+    <part name="p11.4m" crc="668b25a4" length="0x8000" />
+    <part name="p14.2m" crc="a7031d4a" length="0x8000" />
+    <part name="p12.4p" crc="f44e95fa" length="0x8000" />
+    <part name="p15.2p" crc="120d2450" length="0x8000" />
+    <part name="p13.4r" crc="980ca3d8" length="0x8000" />
+    <part name="p16.2r" crc="9f820e8a" length="0x8000" />
+    <part repeat="0x10000">FF</part>
+    <part repeat="0x40000">FF</part>
+    <!--proms at 120000-->
+    <part name="c1.1k" crc="491ab831" length="0x400" />
+    <part name="c2.2l" crc="8feca424" length="0x400" />
+    <part name="c3.1l" crc="220076ca" length="0x400" />
+    <part repeat="0xF400">FF</part>
+    <!--ym2 at 130000-->
+    <part name="p4.5e" crc="e10fb8cc" length="0x10000" />
+    <part name="p5.5g" crc="93e5f110" length="0x10000" />
+  </rom>
+  <switches base="16" default="3F,BB">
+    <dip name="Kill Friend &amp; Walk Everywhere (Cheat)" bits="0" ids="No,Yes" values="1,0" />
+    <dip name="P1 &amp; P2 Fire Buttons" bits="1" ids="Common,Separate" values="0,1" />
+    <dip name="Lives" bits="3" ids="5,3" values="0,1" />
+    <dip name="Coin A" bits="4,5" ids="4C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1C/2Cr,1C/3Cr,1C/4Cr,1C/6Cr" values="0,1,2,3" />
+    <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Normal,Easy" values="0,1,2,3" />
+    <dip name="Game Mode" bits="10,11" ids="Freeze,Infinite Lives,Demo Sounds On,Demo Sounds Off" values="0,1,2,3" />
+    <dip name="Allow Continue" bits="14" ids="Yes,No" values="0,1" />
+    <dip name="Credits Buy Lives During Play" bits="15" ids="No,Yes" values="0,1" />
+    <dip name="Bonus Repeat" bits="2" ids="First Awards,Repeated" values="0,1" />
+    <dip name="Bonus Life" bits="12,13" ids="None,100k 200k,60k 120k,50k 100k" values="0,1,2,3" />
+  </switches>
+  <rom index="254">
+    <part>3F BB</part>
+  </rom>
+  <rom index="3" md5="0c3d963db6dd9f5f3668b7c9b3521aa8">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 FF 2C 50 00 55 00 00 00 FC 5F 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="83" />
+</misterromdescription>

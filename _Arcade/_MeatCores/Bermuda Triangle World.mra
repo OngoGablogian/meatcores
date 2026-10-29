@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Bermuda Triangle (World?)</name>
+  <setname>bermudat</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1987</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Fire,Formation,Start,Coin,Pause,Service Credit,Aim Left,Aim Right" default="A,B,Start,Select,X,Y,L,R" count="2" />
+  <rom index="1">
+    <part>0B</part>
+  </rom>
+  <rom index="0" zip="bermudat.zip" md5="a38c47c19d2291634e9bcd9bdb85d215">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="p1.4p" crc="43dec5e9" length="0x10000" />
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="p2.8p" crc="0e193265" length="0x10000" />
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="p3.7k" crc="53a82e50" length="0x10000" />
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="p10.3a" crc="d3650211" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--bg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="p22.1e" crc="8daf7df4" length="0x10000" />
+    <part name="p21.1d" crc="b7689599" length="0x10000" />
+    <part name="p20.1b" crc="ab6217b7" length="0x10000" />
+    <part name="p19.1a" crc="8ed759a0" length="0x10000" />
+    <!--sp16_tiles at 080000: native bytes; region holes 00, slot padding FF-->
+    <part name="p6.3g" crc="8ffdf969" length="0x8000" />
+    <part name="p7.3e" crc="268d10df" length="0x8000" />
+    <part name="p8.3d" crc="3e39e9dd" length="0x8000" />
+    <part name="p9.3b" crc="bf56da61" length="0x8000" />
+    <!--sp32_tiles at 0A0000: native bytes; region holes 00, slot padding FF-->
+    <part name="p11.7p" crc="aae7410e" length="0x10000" />
+    <part name="p12.7s" crc="18914f70" length="0x10000" />
+    <part name="p13.8h" crc="cd79ce81" length="0x10000" />
+    <part name="p14.8k" crc="edc57117" length="0x10000" />
+    <part name="p15.8m" crc="448bf9f4" length="0x10000" />
+    <part name="p16.8n" crc="119999eb" length="0x10000" />
+    <part name="p17.8p" crc="b5462139" length="0x10000" />
+    <part name="p18.8s" crc="cb416227" length="0x10000" />
+    <!--proms at 120000: native bytes; region holes 00, slot padding FF-->
+    <part name="1.1k" crc="f4b54d06" length="0x400" />
+    <part name="2.1l" crc="baac139e" length="0x400" />
+    <part name="3.2l" crc="2edf2e0b" length="0x400" />
+    <part name="horizon.6h" crc="c20b197b" length="0x400" />
+    <part name="vertical.7h" crc="5d0c617f" length="0x400" />
+    <part repeat="0xec00">FF</part>
+    <!--ym2 at 130000: native bytes; region holes 00, slot padding FF-->
+    <part name="p4.5e" crc="4bc83229" length="0x10000" />
+    <part name="p5.5g" crc="817bd62c" length="0x10000" />
+    <!--rjproms at 150000: native bytes; region holes 00, slot padding FF-->
+    <!--NO_DUMP 1.1d: preserve unknown-mask placeholder, not known ROM bytes-->
+    <part repeat="0x1000">FF</part>
+    <!--NO_DUMP 1.2d: preserve unknown-mask placeholder, not known ROM bytes-->
+    <part repeat="0x1000">FF</part>
+    <part repeat="0xe000">FF</part>
+  </rom>
+  <rom index="3" md5="4af16e67debaa1076ce0d1bb428ae6e0">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 FE BE 50 00 4F 00 00 00 E3 CE 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="83" />
+  <switches base="16" default="3F,BB">
+    <dip name="Unused" bits="0" ids="Off,On" values="1,0" />
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0" />
+    <dip name="Lives" bits="3" ids="3,5" values="1,0" />
+    <dip name="Coin A" bits="4,5" ids="4C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1C/2Cr,1C/3Cr,1C/4Cr,1C/6Cr" values="0,1,2,3" />
+    <dip name="Difficulty" bits="8,9" ids="Easy,Normal,Hard,Hardest" values="3,2,1,0" />
+    <dip name="Game Mode" bits="10,11" ids="Demo Sounds Off,Demo Sounds On,Freeze,Infinite Lives" values="3,2,0,1" />
+    <dip name="Game Style" bits="14,15" ids="Normal no cont.,Normal cont.,Time attack 3m,Time attack 5m" values="3,2,1,0" />
+    <dip name="Bonus Repeat" bits="2" ids="Repeated,First Awards" values="1,0" />
+    <dip name="Bonus" bits="12,13" ids="None,100k 200k 200k+,60k 120k 120k+,50k 100k 100k+" values="0,1,2,3" />
+    <!--Bonus threshold labels show the repeated schedule; First Awards selects the finite award schedule. Exact source combinations are retained in the proof.-->
+  </switches>
+  <rom index="254">
+    <part>3F BB</part>
+  </rom>
+</misterromdescription>

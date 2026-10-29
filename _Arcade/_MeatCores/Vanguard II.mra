@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Vanguard II</name>
+  <setname>vangrd2</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1984</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Fire,Missile,Start,Coin,Pause" default="A,B,Start,Select,X" count="2" />
+  <rom index="1">
+    <part>01</part>
+  </rom>
+  <rom index="0" zip="vangrd2.zip" md5="807b729d29393def88bc00be9948e7df">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="p1.9a" crc="bc9eeca5" length="0x2000" />
+    <part name="p3.11a" crc="3970f69d" length="0x2000" />
+    <part name="p2.12a" crc="58b08b58" length="0x2000" />
+    <part name="p4.14a" crc="a95f11ea" length="0x2000" />
+    <part repeat="0x8000">00</part>
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="p5.4a" crc="e4dfd0ba" length="0x2000" />
+    <part name="p6.6a" crc="894ff00d" length="0x2000" />
+    <part name="p7.7a" crc="40b4d069" length="0x2000" />
+    <part repeat="0xa000">00</part>
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="p8.6a" crc="a3daa438" length="0x2000" />
+    <part name="p9.8a" crc="9345101a" length="0x2000" />
+    <part repeat="0xc000">00</part>
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="p15.1e" crc="85718a41" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--fg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="p13.1a" crc="912f22c6" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--bg_tiles at 050000: native bytes; region holes 00, slot padding FF-->
+    <part name="p14" crc="7aa0b684" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--sp16_tiles at 060000: native bytes; region holes 00, slot padding FF-->
+    <part name="p10.4kl" crc="5bfc04c0" length="0x2000" />
+    <part name="p11.3kl" crc="620cd4ec" length="0x2000" />
+    <part name="p12.1kl" crc="8658ea6c" length="0x2000" />
+    <part repeat="0xa000">FF</part>
+    <!--proms at 070000: native bytes; region holes 00, slot padding FF-->
+    <part name="mb7054.3j" crc="506f659a" length="0x400" />
+    <part name="mb7054.4j" crc="222133ce" length="0x400" />
+    <part name="mb7054.5j" crc="2e21a79b" length="0x400" />
+    <part repeat="0xf400">FF</part>
+  </rom>
+  <rom index="3" md5="fa222dbcd3ac0d4fc98aec9557e6f6c6">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 C3 80 60 0A 00 00 00 00 F6 20 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="99" />
+  <switches base="16" default="BF,EE">
+    <dip name="Coinage" bits="0,2" ids="6C/1Cr,5C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr,1C/2Cr,1C/3Cr,1C/5Cr" values="0,1,2,3,7,6,5,4" />
+    <dip name="Bonus Life" bits="3,5" ids="30000,40000,50000,60000,70000,80000,90000,100000" values="7,6,5,4,3,2,1,0" />
+    <dip name="Lives" bits="6,7" ids="1,2,3,5" values="0,1,2,3" />
+    <dip name="Demo Sounds" bits="8" ids="Off,On" values="1,0" />
+    <dip name="Freeze" bits="9" ids="Off,On" values="1,0" />
+    <dip name="Cabinet" bits="10" ids="Upright,Cocktail" values="1,0" />
+    <dip name="Language" bits="11" ids="English,Japanese" values="1,0" />
+    <dip name="Bonus Repeat" bits="12" ids="Every bonus,Bonus only" values="0,1" />
+    <dip name="Infinite Lives (Cheat)" bits="13" ids="Off,On" values="1,0" />
+    <dip name="Free Play" bits="14" ids="Off,On" values="1,0" />
+    <dip name="Flip Screen" bits="15" ids="Off,On" values="1,0" />
+  </switches>
+  <rom index="254">
+    <part>BF EE</part>
+  </rom>
+</misterromdescription>

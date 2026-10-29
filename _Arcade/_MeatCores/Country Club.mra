@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Country Club</name>
+  <setname>countryc</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1988</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <joystick ways="8" />
+  <buttons names="Select Club,View Course,Start,Coin,Pause,Service" default="A,B,Start,Select,X,Y" count="2" />
+  <rom index="1">
+    <part>0A</part>
+  </rom>
+  <rom index="0" zip="countryc.zip">
+    <!--maincpu (A) at 000000; unused tail FF-->
+    <part name="cc5.4e" crc="07666af8" length="0x4000" />
+    <part name="cc6.4g" crc="ab18fd9f" length="0x4000" />
+    <part name="cc7.4h" crc="58a1ec0c" length="0x4000" />
+    <part repeat="0x4000">FF</part>
+    <!--sub (B) at 010000-->
+    <part name="cc2.2e" crc="43d205e0" length="0x4000" />
+    <part name="cc3.2g" crc="7290770f" length="0x4000" />
+    <part name="cc4.2h" crc="61990582" length="0x4000" />
+    <part repeat="0x4000">FF</part>
+    <!--audiocpu (S) at 020000-->
+    <part name="cc1.1f" crc="863f1624" length="0x10000" />
+    <!--tx_tiles at 030000 (16K window; tnk3 8K chip repeated as MAME ROM_RELOAD)-->
+    <part name="cc11.1e" crc="ce927ac7" length="0x4000" />
+    <part repeat="0xc000">FF</part>
+    <!--bg_tiles at 040000 (32K window)-->
+    <part name="cc13.2d" crc="ef86c388" length="0x4000" />
+    <part name="cc12.2c" crc="d7d55a36" length="0x4000" />
+    <part repeat="0x8000">FF</part>
+    <!--sp16 planes at 050000/058000/060000, raw chip order (MAME region thirds), each chip padded to 32K-->
+    <part name="cc10.7h" crc="90091667" length="0x8000" />
+    <part name="cc9.7g" crc="56249142" length="0x8000" />
+    <part name="cc8.7e" crc="55943065" length="0x8000" />
+    <!--proms at 068000: R, G, B 0x400 each-->
+    <part name="cc1.5f" crc="7da9ce33" length="0x400" />
+    <part name="cc2.5g" crc="982e4f46" length="0x400" />
+    <part name="cc3.5h" crc="47f2b83d" length="0x400" />
+  </rom>
+  <switches base="16" default="FB,FF">
+    <dip name="Language" bits="0" ids="Japanese,English" values="0,1" />
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0" />
+    <dip name="Controls" bits="2" ids="Single,Dual" values="0,1" />
+    <dip name="Unused" bits="3" ids="Off,On" values="1,0" />
+    <dip name="Coin A" bits="4,5" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit" values="0,1,2,3" />
+    <dip name="Shot Time" bits="8" ids="Short (15 sec),Long (20 sec)" values="0,1" />
+    <dip name="Bonus Holes" bits="9" ids="Less (Par 0 Birdie 1 Eagle 2),More (Par 1 Birdie 2 Eagle 3)" values="0,1" />
+    <dip name="Game Mode" bits="10,11" ids="Freeze,Demo Sounds Off,Infinite Holes (Cheat),Demo Sounds On" values="0,1,2,3" />
+    <dip name="Play Holes" bits="12,13" ids="5,4,3,2" values="0,1,2,3" />
+    <dip name="Allow Continue" bits="14" ids="No,Yes" values="0,1" />
+    <dip name="Service Mode" bits="15" ids="On,Off" values="0,1" />
+  </switches>
+  <rom index="254">
+    <part>FB FF</part>
+  </rom>
+</misterromdescription>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>TouchDown Fever (US)</name>
+  <setname>tdfever</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1987</year>
+  <manufacturer>SNK</manufacturer>
+  <players>4</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Run,Pass,Start Game A,Start Game B,Start Game C,Start Game D,Start Game E,Coin,Pause,Service Credit,Test" default="A,B,Start,L,R,L2,R2,Select,X,Y,L3" count="2" />
+  <rom index="1">
+    <part>0F</part>
+  </rom>
+  <rom index="0" zip="tdfever.zip" md5="bf2fae8c832a4191bfad0834f7ca83a8">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="td2-ver3u.6c" crc="92138fe4" length="0x10000" />
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="td1-ver3u.2c" crc="798711f5" length="0x10000" />
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="td3-ver2u.3j" crc="5d13e0b1" length="0x10000" />
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="td14-u.4n" crc="e841bf1a" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--bg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="td15.8d" crc="ad6e0927" length="0x10000" />
+    <part name="td16.8e" crc="181db036" length="0x10000" />
+    <part name="td17.8f" crc="c5decca3" length="0x10000" />
+    <part name="td18-ver2u.8g" crc="3924da37" length="0x10000" />
+    <part name="td19.8j" crc="bc17ea7f" length="0x10000" />
+    <!--sp32_tiles at 090000: native bytes; region holes 00, slot padding FF-->
+    <part name="td13.2t" crc="88e2e819" length="0x10000" />
+    <part name="td12-1.2s" crc="f6f83d63" length="0x10000" />
+    <part name="td11.2r" crc="a0d53fbd" length="0x10000" />
+    <part name="td10-1.2p" crc="c8c71c7b" length="0x10000" />
+    <part name="td9.2n" crc="a8979657" length="0x10000" />
+    <part name="td8-1.2l" crc="28f49182" length="0x10000" />
+    <part name="td7.2k" crc="72a5590d" length="0x10000" />
+    <part name="td6-1.2j" crc="9b6d4053" length="0x10000" />
+    <!--proms at 110000: native bytes; region holes 00, slot padding FF-->
+    <part name="2t.8e" crc="67bdf8a0" length="0x400" />
+    <part name="1t.8d" crc="9c4a9198" length="0x400" />
+    <part name="3t.9e" crc="c93c18e8" length="0x400" />
+    <part repeat="0xf400">FF</part>
+    <!--ym2 at 120000: native bytes; region holes 00, slot padding FF-->
+    <part name="td5.7p" crc="04794557" length="0x10000" />
+    <part name="td4.7n" crc="155e472e" length="0x10000" />
+  </rom>
+  <rom index="3" md5="a662cc38342fcba9666f7d2223a09f55">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 DF 28 28 C5 00 00</part>
+  </rom>
+  <nvram index="4" size="40" />
+  <switches base="16" default="33,FB">
+    <dip name="Allow Continue" bits="0" ids="No,Yes" values="0,1" />
+    <dip name="Cabinet" bits="1" ids="2 Player Upright,4 Player Cocktail" values="1,0" />
+    <dip name="Time Bonus" bits="2,3" ids="Each First Down,4 First Downs,6 First Downs,8 First Downs" values="0,1,2,3" />
+    <dip name="Coin A" bits="4,5" ids="4C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1C/2Cr,1C/3Cr,1C/4Cr,1C/6Cr" values="0,1,2,3" />
+    <dip name="Difficulty" bits="8,9" ids="Easy,Normal,Hard,Hardest" values="3,2,1,0" />
+    <dip name="Game Mode" bits="10,11" ids="Demo Sound Off,Demo Sound On,Freeze,Never Finish" values="3,2,0,1" />
+    <dip name="Play Time (Type A)" bits="12,14" ids="1:00,1:10,1:20,1:30,1:40,1:50,2:00,2:10" values="7,6,5,4,3,2,1,0" />
+    <dip name="Flip Screen" bits="15" ids="Off,On" values="1,0" />
+  </switches>
+  <rom index="254">
+    <part>33 FB</part>
+  </rom>
+</misterromdescription>

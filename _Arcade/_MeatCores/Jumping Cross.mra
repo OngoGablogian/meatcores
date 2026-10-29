@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Jumping Cross (set 1)</name>
+  <setname>jcross</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1984</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Accelerate,Jump,Start,Coin,Pause" default="A,B,Start,Select,X" count="2" />
+  <rom index="1">
+    <part>03</part>
+  </rom>
+  <rom index="0" zip="jcross.zip" md5="7b12088de4bfad29af61e2091ff80f8a">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="p1.10b" crc="0e79bbcd" length="0x2000" />
+    <part name="p2.12b" crc="999b2bcc" length="0x2000" />
+    <part name="p3.13b" crc="ac89e49c" length="0x2000" />
+    <part name="p4.14b" crc="4fd7848d" length="0x2000" />
+    <part name="p5.15b" crc="8500575d" length="0x2000" />
+    <part repeat="0x6000">00</part>
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="p6.15a" crc="77ed51e7" length="0x2000" />
+    <part name="p7.14a" crc="23cf0f70" length="0x2000" />
+    <part name="p8.13a" crc="5bed3118" length="0x2000" />
+    <part name="p9.12a" crc="cd75dc95" length="0x2000" />
+    <part repeat="0x8000">00</part>
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="p10.1f" crc="9ae8ea93" length="0x2000" />
+    <part name="p11.1g" crc="83785601" length="0x2000" />
+    <part repeat="0xc000">00</part>
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="p16.10a" crc="08ad93fe" length="0x2000" />
+    <part name="p17.2d" crc="3ebb5beb" length="0x2000" />
+    <part repeat="0xc000">FF</part>
+    <!--bg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="p15.2a" crc="ea3dfbc9" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--sp16_tiles at 050000: native bytes; region holes 00, slot padding FF-->
+    <part name="p12.2l" crc="4532509b" length="0x2000" />
+    <part name="p13.2k" crc="70d219bf" length="0x2000" />
+    <part name="p14.2j" crc="42a12b9d" length="0x2000" />
+    <part repeat="0xa000">FF</part>
+    <!--proms at 060000: native bytes; region holes 00, slot padding FF-->
+    <part name="2.7j" crc="b72a96a5" length="0x400" />
+    <part name="1.8j" crc="35650448" length="0x400" />
+    <part name="0.9j" crc="99f54d48" length="0x400" />
+    <part repeat="0xf400">FF</part>
+  </rom>
+  <rom index="3" md5="f8461243a6b0cbb22a20e8c85043cc4c">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 F5 AB 1E 00 49 00 00 00 DA 1C 03 00 54 00</part>
+  </rom>
+  <nvram index="4" size="33" />
+  <switches base="16" default="FD,F7">
+    <dip name="Upright Controls" bits="0" ids="Single,Dual" values="1,0" />
+    <dip name="Cabinet" bits="1" ids="Upright,Cocktail" values="0,1" />
+    <dip name="Lives" bits="2" ids="3,5" values="1,0" />
+    <dip name="Coinage" bits="3,5" ids="3C/1Cr,2C/1Cr,1C/1Cr,1C/2Cr,1C/3Cr,Free Play" values="5,6,7,3,4,0" />
+    <dip name="Difficulty" bits="9,10" ids="Easy,Normal,Hard,Hardest" values="3,2,1,0" />
+    <dip name="Game mode" bits="11,12" ids="Demo Sounds Off,Demo Sounds On,Freeze,Infinite Lives" values="3,2,0,1" />
+    <dip name="Flip Screen" bits="13" ids="Off,On" values="1,0" />
+    <dip name="Unused" bits="14" ids="Off,On" values="1,0" />
+    <dip name="No BG Collision (Cheat)" bits="15" ids="Off,On" values="1,0" />
+    <dip name="Bonus Repeat" bits="8" ids="Repeated,First Awards" values="1,0" />
+    <dip name="Bonus" bits="6,7" ids="None,60k 160k 100k+,40k 120k 80k+,20k 60k 40k+" values="0,1,2,3" />
+    <!--Bonus threshold labels show the repeated schedule; First Awards selects the finite award schedule. Exact source combinations are retained in the proof.-->
+  </switches>
+  <rom index="254">
+    <part>FD F7</part>
+  </rom>
+</misterromdescription>

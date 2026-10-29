@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Athena</name>
+  <setname>athena</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1986</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <joystick ways="8" />
+  <buttons names="Attack,Jump,Start,Coin,Pause,Service" default="A,B,Start,Select,X,Y" count="2" />
+  <rom index="1">
+    <part>08</part>
+  </rom>
+  <rom index="0" zip="athena.zip">
+    <!--maincpu (A) at 000000; unused tail FF-->
+    <part name="p1.4p" crc="900a113c" length="0x4000" />
+    <part name="p2.4m" crc="61c69474" length="0x8000" />
+    <part repeat="0x4000">FF</part>
+    <!--sub (B) at 010000-->
+    <part name="p3.8p" crc="df50af7e" length="0x4000" />
+    <part name="p4.8m" crc="f3c933df" length="0x8000" />
+    <part repeat="0x4000">FF</part>
+    <!--audiocpu (S) at 020000-->
+    <part name="p5.6g" crc="42dbe029" length="0x4000" />
+    <part name="p6.6k" crc="596f1c8a" length="0x8000" />
+    <part repeat="0x4000">FF</part>
+    <!--tx_tiles at 030000 (16K window; tnk3 8K chip repeated as MAME ROM_RELOAD)-->
+    <part name="p11.2d" crc="18b4bcca" length="0x4000" />
+    <part repeat="0xc000">FF</part>
+    <!--bg_tiles at 040000 (32K window)-->
+    <part name="p10.2b" crc="f269c0eb" length="0x8000" />
+    <part repeat="0x8000">FF</part>
+    <!--sp16 planes at 050000/058000/060000, raw chip order (MAME region thirds), each chip padded to 32K-->
+    <part name="p7.2p" crc="c63a871f" length="0x8000" />
+    <part name="p8.2s" crc="760568d8" length="0x8000" />
+    <part name="p9.2t" crc="57b35c73" length="0x8000" />
+    <!--proms at 068000: R, G, B 0x400 each-->
+    <part name="3.2c" crc="294279ae" length="0x400" />
+    <part name="2.1b" crc="d25c9099" length="0x400" />
+    <part name="1.1c" crc="a4a4e7dc" length="0x400" />
+  </rom>
+  <switches base="16" default="3D,FB">
+    <dip name="Unused" bits="0" ids="Off,On" values="1,0" />
+    <dip name="Cabinet" bits="1" ids="Upright,Cocktail" values="0,1" />
+    <dip name="Bonus Repeat" bits="2" ids="First Awards Only,Repeated" values="0,1" />
+    <dip name="Lives" bits="3" ids="3,5" values="1,0" />
+    <dip name="Coin A" bits="4,5" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/6 Credits" values="0,1,2,3" />
+    <dip name="Difficulty" bits="8,9" ids="Easy,Normal,Hard,Hardest" values="3,2,1,0" />
+    <dip name="Demo Sounds" bits="10" ids="Off,On" values="1,0" />
+    <dip name="Freeze" bits="11" ids="Off,On" values="1,0" />
+    <dip name="Bonus Life" bits="12,13" ids="None,100k 200k,60k 120k,50k 100k" values="0,1,2,3" />
+    <dip name="Unused" bits="14" ids="Off,On" values="1,0" />
+    <dip name="Energy" bits="15" ids="12,14" values="1,0" />
+  </switches>
+  <rom index="254">
+    <part>3D FB</part>
+  </rom>
+  <rom index="3" md5="acf58ba17f866e8bbe4293aee144954f">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 FE 52 6F 41 30 00 00 00 D7 F5 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="114" />
+</misterromdescription>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Marvin's Maze</name>
+  <setname>marvins</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1983</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <joystick ways="8" />
+  <buttons names="Fire,Start,Coin,Pause,Service Credit" default="A,Start,Select,X,Y" count="1" />
+  <rom index="1">
+    <part>00</part>
+  </rom>
+  <rom index="0" zip="marvins.zip" md5="25867861394519092d1fbf2aaa83c5fd">
+    <!--maincpu at 000000: native bytes; region holes 00, slot padding FF-->
+    <part name="pa1" crc="0008d791" length="0x2000" />
+    <part name="pa2" crc="9457003c" length="0x2000" />
+    <part name="pa3" crc="54c33ecb" length="0x2000" />
+    <part repeat="0xa000">00</part>
+    <!--sub at 010000: native bytes; region holes 00, slot padding FF-->
+    <part name="pb1" crc="3b6941a5" length="0x2000" />
+    <part repeat="0xe000">00</part>
+    <!--audiocpu at 020000: native bytes; region holes 00, slot padding FF-->
+    <part name="m1" crc="2314c696" length="0x2000" />
+    <part name="m2" crc="74ba5799" length="0x2000" />
+    <part repeat="0xc000">00</part>
+    <!--tx_tiles at 030000: native bytes; region holes 00, slot padding FF-->
+    <part name="s1" crc="327f70f3" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--fg_tiles at 040000: native bytes; region holes 00, slot padding FF-->
+    <part name="b1" crc="e528bc60" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--bg_tiles at 050000: native bytes; region holes 00, slot padding FF-->
+    <part name="b2" crc="e528bc60" length="0x2000" />
+    <part repeat="0xe000">FF</part>
+    <!--sp16_tiles at 060000: native bytes; region holes 00, slot padding FF-->
+    <part name="f1" crc="0bd6b4e5" length="0x2000" />
+    <part name="f2" crc="8fc2b081" length="0x2000" />
+    <part name="f3" crc="e55c9b83" length="0x2000" />
+    <part repeat="0xa000">FF</part>
+    <!--proms at 070000: native bytes; region holes 00, slot padding FF-->
+    <part name="marvmaze.j1" crc="92f5b06d" length="0x400" />
+    <part name="marvmaze.j2" crc="d2b25665" length="0x400" />
+    <part name="marvmaze.j3" crc="df9e6005" length="0x400" />
+    <part repeat="0xf400">FF</part>
+  </rom>
+  <rom index="3" md5="b94963431bf8c6a42a1b029152d686f4">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 C2 90 46 00 4B 00 00 00 C2 8B 04 00 00 00 00 00 C2 8C 01 01 01 00</part>
+  </rom>
+  <nvram index="4" size="75" />
+  <switches base="16" default="C6,A8">
+    <dip name="Lives" bits="0,1" ids="1,2,3,5" values="0,1,2,3" />
+    <dip name="Infinite Lives (Cheat)" bits="2" ids="Off,On" values="1,0" />
+    <dip name="Coinage" bits="3,5" ids="5C/1Cr,3C/1Cr,2C/1Cr,1C/1Cr,1C/2Cr,1C/3Cr,1C/5Cr,1C/6Cr" values="7,6,5,0,1,2,3,4" />
+    <dip name="Free Play" bits="6" ids="Off,On" values="1,0" />
+    <dip name="Freeze" bits="7" ids="Off,On" values="1,0" />
+    <dip name="1st Bonus Life" bits="8,10" ids="10000,20000,30000,40000,50000,60000,70000,80000" values="0,1,2,3,4,5,6,7" />
+    <dip name="2nd Bonus Life" bits="11,12" ids="1st bonus*2,1st bonus*3,1st bonus*4,None" values="1,2,3,0" />
+    <dip name="Demo Sounds" bits="13" ids="Off,On" values="0,1" />
+    <dip name="Cabinet" bits="14" ids="Upright,Cocktail" values="0,1" />
+    <dip name="Flip Screen" bits="15" ids="Off,On" values="1,0" />
+  </switches>
+  <rom index="254">
+    <part>C6 A8</part>
+  </rom>
+</misterromdescription>
