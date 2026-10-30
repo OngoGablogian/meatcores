@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <name>Psycho Soldier (Japan)</name>
+  <setname>psychosj</setname>
+  <rbf>Arcade-SNKTripleZ80</rbf>
+  <mameversion>0289</mameversion>
+  <year>1987</year>
+  <manufacturer>SNK</manufacturer>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <region>Japan</region>
+  <joystick ways="8" />
+  <buttons names="Fire,Psycho Orb,Start,Coin,Pause,Service Mode" default="A,B,Start,Select,X,L" count="2" />
+  <rom index="1">
+    <part>0D</part>
+  </rom>
+  <rom index="0" zip="psychosj.zip|psychos.zip" md5="8a736a098014f37389967336cda5b185">
+    <part name="ps7.4m" crc="05dfb409" length="0xC000" />
+    <part repeat="0x4000">FF</part>
+    <part name="ps6.8m" crc="5f426ddb" length="0xC000" />
+    <part repeat="0x4000">FF</part>
+    <part name="ps5.6j" crc="bbd0a8e3" length="0xC000" />
+    <part repeat="0x4000">FF</part>
+    <part name="ps8.3a" crc="11a71919" />
+    <part repeat="0x8000">FF</part>
+    <part name="ps16.1f" crc="167e5765" />
+    <part name="ps15.1d" crc="8b0fe8d0" />
+    <part name="ps14.1c" crc="f4361c50" />
+    <part name="ps13.1a" crc="e4b0b95e" />
+    <interleave input="8" output="32">
+      <part name="ps12.3g" crc="f96f82db" map="0001" />
+      <part name="ps11.3e" crc="2b007733" map="0010" />
+      <part name="ps10.3c" crc="efa830e1" map="0100" />
+      <part name="ps9.3b" crc="24559ee1" map="1000" />
+    </interleave>
+    <interleave input="8" output="32">
+      <part name="ps17.10f" crc="2bac250e" map="0001" />
+      <part name="ps19.10j" crc="9ff91a97" map="0010" />
+      <part name="ps21.10m" crc="df283b67" map="0100" />
+      <part name="ps23.10r" crc="c4488472" map="1000" />
+    </interleave>
+    <interleave input="8" output="32">
+      <part name="ps18.10h" crc="5e1ba353" map="0001" />
+      <part name="ps20.10l" crc="ae1965ef" map="0010" />
+      <part name="ps22.10n" crc="914f051f" map="0100" />
+      <part name="ps24.10s" crc="8ec7fe18" map="1000" />
+    </interleave>
+    <part name="psc1.1k" crc="27b8ca8c" />
+    <part name="psc3.1l" crc="40e78c9e" />
+    <part name="psc2.2k" crc="d845d5ac" />
+    <part name="horizon.8j" crc="c20b197b" />
+    <part name="vertical.8k" crc="5d0c617f" />
+    <part repeat="0xEC00">FF</part>
+    <part name="ps1.5b" crc="0f8e8276" />
+    <part name="ps2.5c" crc="34e41dfb" />
+    <part name="ps3.5d" crc="aa583c5e" />
+    <part name="ps4.5f" crc="7e8bce7a" />
+  </rom>
+  <rom index="3" md5="571068f1742aa0ce61805f601ea6be9d">
+    <part>00 00 FF FF 00 FF 00 02 00 02 00 01 11 11 00 00 00 00 DD 05 F5 31 FF 00 00 00 FE 66 03 00 00 00</part>
+  </rom>
+  <rom index="254">
+    <part>3B BF</part>
+  </rom>
+  <nvram index="4" size="248" />
+  <switches default="3B,BF" base="16">
+    <dip name="Service Mode" bits="0" ids="Off,On" values="1,0" />
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0" />
+    <dip name="Bonus Repeat" bits="2" ids="Repeated,First Only" values="0,1" />
+    <dip name="Lives" bits="3" ids="3,5" values="1,0" />
+    <dip name="Coin A" bits="4,5" ids="4 Coins 1 Credit,3 Coins 1 Credit,2 Coins 1 Credit,1 Coin 1 Credit" values="0,1,2,3" />
+    <dip name="Coin B" bits="6,7" ids="1 Coin 2 Credits,1 Coin 3 Credits,1 Coin 4 Credits,1 Coin 6 Credits" values="0,1,2,3" />
+    <dip name="Difficulty" bits="8,9" ids="Easy,Normal,Hard,Hardest" values="2,3,1,0" />
+    <dip name="Demo Sounds" bits="10" ids="Off,On" values="0,1" />
+    <dip name="Freeze" bits="11" ids="Off,On" values="1,0" />
+    <dip name="Bonus Threshold" bits="12,13" ids="None,100k / 200k,60k / 120k,50k / 100k" values="0,1,2,3" />
+    <dip name="Allow Continue" bits="14" ids="No,Yes" values="1,0" />
+    <dip name="Unused" bits="15" ids="Off,On" values="1,0" />
+  </switches>
+</misterromdescription>
